@@ -4,11 +4,12 @@ import (
 	"log"
 
 	maelstrom "github.com/jepsen-io/maelstrom/demo/go"
+	"./Core"
 )
 
 func main() {
 	n := maelstrom.NewNode()
-	c := NewCore(n)
+	c := Core.NewCore(n)
 
 	c.Handle("echo", c.Echo)
 
